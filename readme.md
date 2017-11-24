@@ -18,11 +18,11 @@
 
 ##### Registration
 
-`PUT http://charlesdewald.com/api/v1/users/register` where `username` and `password` are required fields. Pass variables as x-www-form-urlencoded or raw like so `username=charles1123b&password=pass`. A successful call with return an `access_token`.
+`PUT http://charlesdewald.com/api/v1/users/register` where `username` and `password` are required fields. Pass variables as x-www-form-urlencoded or raw like so `username=charles1123b&password=pass`. A successful call will return an `access_token`.
 
 ##### Login
 
-`POST http://charlesdewald.com/api/v1/users/login` where `username` and `password` are required fields. A successful call with return an `access_token`.
+`POST http://charlesdewald.com/api/v1/users/login` where `username` and `password` are required fields. A successful call will return an `access_token`.
 
 ##### List of Reddit Posts
 
