@@ -1,13 +1,12 @@
 SELECT 
-    multi / total AS multi_percent
+    COUNT(t.multi) / (SELECT 
+            COUNT(id)
+        FROM
+            t_users) AS percent
 FROM
     (SELECT 
-        (SELECT 
-                    COUNT(id) AS multi
-                FROM
-                    t_addresses
-                GROUP BY user_id
-                HAVING multi > 1) AS multi,
-            COUNT(id) AS total
+        COUNT(user_id) AS multi
     FROM
-        t_addresses AS total) AS tt
+        t_addresses
+    GROUP BY user_id
+    HAVING multi > 1) AS t
