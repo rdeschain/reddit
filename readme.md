@@ -43,4 +43,6 @@ The access token is required to be passed in the header like so: `http header: "
 ##### Retrieving Favorite Posts by Specified Tag(s)
 `GET http://charlesdewald.com/api/v1/reddit/favorites/tags?{query_string}` returns only posts that are favored by the user and tagged with the specified tag(s) within the `query_string`. If no `query_string` is passed then all favored posts are returned.
 
+Here is an example: `http://charlesdewald.com/api/v1/reddit/favorites/tags?0=fun&1=nutty`
+
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
