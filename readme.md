@@ -26,7 +26,7 @@
 
 ##### List of Reddit Posts
 
-`GET http://charlesdewald.com/api/v1/reddit` returns a list of dictionaries from `https://www.reddit.com/hot.json`. Results are cached in Redis.
+`GET http://charlesdewald.com/api/v1/reddit` returns a list of dictionaries from `https://www.reddit.com/hot.json`. Results are cached in Redis for 5 minutes.
 
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
 
