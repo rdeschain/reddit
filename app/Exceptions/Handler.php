@@ -51,7 +51,7 @@ class Handler extends ExceptionHandler
 
         //not found update
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
-            return response()->json(['error' => 'Not route like that found.'], 404);
+            return response()->json(['error' => 'No route like that found.'], 404);
         }
 
         return parent::render($request, $exception);
