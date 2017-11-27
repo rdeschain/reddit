@@ -36,5 +36,5 @@ Route::group(['prefix' => 'v1'], function () {
 
 //absolute catch all
 Route::any('{catchall}', function () {
-    return Response::create(['error' => 'Not route like that found.'], 404);
+    return Response::create(['error' => 'No route like that found.'], 404);
 });
