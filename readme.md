@@ -31,7 +31,7 @@
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
 
 ##### Favoring and Tagging a Post
-`PUT http://charlesdewald.com/api/v1/reddit/{id}/tags` will favor the post on behalf of the user with any number of tags by passing `tags` as x-www-form-urlencoded or raw like so `tags=0=funny&1=strange`. If the `tags` variable is not passed or empty then the post will be favored with no tags.
+`PUT http://charlesdewald.com/api/v1/reddit/{id}/tags` will favor the post on behalf of the user with any number of tags by passing `tags` as x-www-form-urlencoded or raw like so `tags=0=funny&1=strange`. If the `tags` variable is not passed or empty then the post will be favored with no tags. The `id` is the reddit_id to tag.
 
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
 
