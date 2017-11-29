@@ -31,9 +31,14 @@
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
 
 ##### Favoring and Tagging a Post
-`PUT http://charlesdewald.com/api/v1/reddit/{id}/tags` will favor the post on behalf of the user with any number of tags by passing `tags` as x-www-form-urlencoded or raw like so `tags=0=funny&1=strange`. If the `tags` variable is not passed or empty then the post will be favored with no tags. The `id` is the reddit_id to tag.
+`PUT http://charlesdewald.com/api/v1/reddit/{id}/tags` will favor the post on behalf of the user with any number of tags by passing `tags` as x-www-form-urlencoded. If the `tags` variable is not passed or empty then the post will be favored with no tags. The `id` is the reddit_id to tag.
 
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
+
+An example of passing `tags`
+
+![Tagging a post](public/images/put_tags.png)
+
 
 ##### Retrieving Favorite Posts
 `GET http://charlesdewald.com/api/v1/reddit/favorites` will return all the user's favorite posts or an empty set.
@@ -43,6 +48,8 @@ The access token is required to be passed in the header like so: `http header: "
 ##### Retrieving Favorite Posts by Specified Tag(s)
 `GET http://charlesdewald.com/api/v1/reddit/favorites/tags?{query_string}` returns only posts that are favored by the user and tagged with the specified tag(s) within the `query_string`. If no `query_string` is passed then all favored posts are returned.
 
-Here is an example: `http://charlesdewald.com/api/v1/reddit/favorites/tags?0=fun&1=nutty`
-
 The access token is required to be passed in the header like so: `http header: "accessToken: xxxxxxxxxxxx"`
+
+An example:
+
+![Getting tags](public/images/get_tags.png)
